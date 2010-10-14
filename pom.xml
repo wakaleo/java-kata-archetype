@@ -1,31 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.wakaleo.training.kata</groupId>
-  <artifactId>java-kata-archetype</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>maven-archetype</packaging>
+    <groupId>com.wakaleo.training.kata</groupId>
+    <artifactId>java-kata-archetype</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>maven-archetype</packaging>
 
-  <name>java-kata-archetype</name>
+    <name>java-kata-archetype</name>
 
-  <build>
-    <extensions>
-      <extension>
-        <groupId>org.apache.maven.archetype</groupId>
-        <artifactId>archetype-packaging</artifactId>
-        <version>2.0-alpha-5</version>
-      </extension>
-    </extensions>
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.archetype</groupId>
+                <artifactId>archetype-packaging</artifactId>
+                <version>2.0-alpha-5</version>
+            </extension>
+        </extensions>
 
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <artifactId>maven-archetype-plugin</artifactId>
-          <version>2.0-alpha-5</version>
-          <extensions>true</extensions>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-  </build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-archetype-plugin</artifactId>
+                    <version>2.0-alpha-5</version>
+                    <extensions>true</extensions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <scm>
+        <connection>scm:git:ssh://github.com/wakaleo/${artifactId}.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/wakaleo/${artifactId}.git</developerConnection>
+        <url>http://github.com/wakaleo/${artifactId}</url>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>wakaleo-releases</id>
+            <url>http://www.wakaleo-labs.com/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>wakaleo-snapshots</id>
+            <url>http://www.wakaleo-labs.com/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
