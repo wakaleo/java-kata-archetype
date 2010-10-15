@@ -4,7 +4,7 @@
 
     <groupId>com.wakaleo.training.kata</groupId>
     <artifactId>java-kata-archetype</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.0.3</version>
     <packaging>maven-archetype</packaging>
 
     <name>java-kata-archetype</name>
